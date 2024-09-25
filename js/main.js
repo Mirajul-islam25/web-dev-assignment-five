@@ -5,6 +5,7 @@ document.getElementById("btn-blog").addEventListener("click", function () {
 document.getElementById("btn-home").addEventListener("click", function () {
   window.location.href = "./index.html";
 });
+
 document.getElementById("btn-history").addEventListener("click", function () {
   viewHideToggle("history-data");
   const historyButton = document.getElementById("btn-history");
@@ -111,7 +112,7 @@ document.getElementById("donate-btn-for-feni")
     const div = document.createElement("div");
     div.innerHTML = `
                 <p class ='p-3 text-lg border-2 border-gray-400 m-3 rounded-xl'> ${inputMoney} tk is donated for flood relief-2024 at <span class ="text-lime-400 font-semibold">Feni, Bangladesh</span>.<br>
-                 date:  ${new Date().toLocaleDateString()} GMT +0600 (Bangladesh Standard Time)</p>
+                date:  ${new Date().toLocaleDateString()} GMT +0600 (Bangladesh Standard Time)</p>
             `;
     document.getElementById("transaction-container").appendChild(div);
   });
@@ -152,7 +153,7 @@ document.getElementById("donate-for-student")
 
     div.innerHTML = `
                 <p class ='p-3 text-lg border-2 border-gray-400 m-3 rounded-xl'> ${donateForStudent} tk is donated for aid for Injured in the <span class ="text-emerald-400 font-bold">Quota Movement, Bangladesh</span>.<br>
-                 date:  ${new Date().toLocaleDateString()} GMT +0600 (Bangladesh Standard Time)</p>
+                date:  ${new Date().toLocaleDateString()} GMT +0600 (Bangladesh Standard Time)</p>
             `;
     document.getElementById("transaction-container").appendChild(div);
   });
