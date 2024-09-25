@@ -35,9 +35,7 @@ document.getElementById("btn-donate").addEventListener("click", function () {
   );
 });
 
-  // Noakhali
-document
-  .getElementById("donate-now-btn-noakhali")
+document.getElementById("donate-now-btn-noakhali")
   .addEventListener("click", function () {
     const addMoney = getValueByIdFromInput("donate-For-noakhali-input");
     const donarBalance = donationValueAmount("main-balance");
@@ -63,16 +61,15 @@ document
       totalDonationGetNoakhali;
     //!pop up Button
     document.getElementById("popup").classList.remove("hidden");
-    document
-      .getElementById("close-confirmation")
+    document.getElementById("close-confirmation")
       .addEventListener("click", function () {
         document.getElementById("popup").classList.add("hidden");
       });
 
     const div = document.createElement("div");
     div.innerHTML = `
-            <p class ='p-3 text-lg'> ${addMoney} tk is donated for famine-2024 at<span class ="text-green-500 text-lg font-semibold"> Noakhaki, Bangladesh</span>. 
-            Transaction date is ${new Date().toLocaleDateString()}</p>
+            <p class ='p-3 text-lg border-2 border-gray-400 m-3 rounded-xl'> ${addMoney} tk is donated for famine-2024 at<span class ="text-amber-400 text-lg font-semibold"> Noakhali, Bangladesh</span>.<br>
+            date:  ${new Date().toLocaleDateString()} GMT +0600 (Bangladesh Standard Time)</p>
         `;
     document.getElementById("transaction-container").appendChild(div);
   });
@@ -97,26 +94,24 @@ document.getElementById("donate-btn-for-feni")
       return;
     }
 
-    //function calculation
     const feniHasBalance = donationValueAmount("donation-balance-feni");
     const donateBalanceISNow = donarBalance - inputMoney;
     document.getElementById("main-balance").innerText = donateBalanceISNow;
     const totalDonationGetFeni = inputMoney + feniHasBalance;
     document.getElementById("donation-balance-feni").innerText =
-      totalDonationGetFeni;
+    totalDonationGetFeni;
 
     //pop up Button added
     document.getElementById("popup").classList.remove("hidden");
-    document
-      .getElementById("close-confirmation")
+    document.getElementById("close-confirmation")
       .addEventListener("click", function () {
         document.getElementById("popup").classList.add("hidden");
       });
 
     const div = document.createElement("div");
     div.innerHTML = `
-                <p class ='p-3 text-lg'> ${inputMoney} tk is donated for flood relief-2024 at <span class ="text-blue-500 font-semibold">Feni, Bangladesh</span>.
-                 Transaction date is ${new Date().toLocaleDateString()}</p>
+                <p class ='p-3 text-lg border-2 border-gray-400 m-3 rounded-xl'> ${inputMoney} tk is donated for flood relief-2024 at <span class ="text-lime-400 font-semibold">Feni, Bangladesh</span>.<br>
+                 date:  ${new Date().toLocaleDateString()} GMT +0600 (Bangladesh Standard Time)</p>
             `;
     document.getElementById("transaction-container").appendChild(div);
   });
@@ -139,7 +134,7 @@ document.getElementById("donate-for-student")
       alert("Wrong!Input accepts only Valid Number");
       return;
     }
-    //function calculation
+
     const balanceIsNow = donationValueAmount("donation-has-rightnow");
     const donateBalanceISNow = donarBalance - donateForStudent;
     document.getElementById("main-balance").innerText = donateBalanceISNow;
@@ -156,8 +151,8 @@ document.getElementById("donate-for-student")
     const div = document.createElement("div");
 
     div.innerHTML = `
-                <p class ='p-3 text-lg'> ${donateForStudent} tk is donated for aid for Injured in the Quota Movement <span class ="text-red-600 font-bold">Quota Movement, Bangladesh</span>.
-                 Transaction date is ${new Date().toLocaleDateString()}</p>
+                <p class ='p-3 text-lg border-2 border-gray-400 m-3 rounded-xl'> ${donateForStudent} tk is donated for aid for Injured in the <span class ="text-emerald-400 font-bold">Quota Movement, Bangladesh</span>.<br>
+                 date:  ${new Date().toLocaleDateString()} GMT +0600 (Bangladesh Standard Time)</p>
             `;
     document.getElementById("transaction-container").appendChild(div);
   });
